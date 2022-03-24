@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">    
+        <div class="row">
+            <div class="col-lg-6 col-12 m-auto my-5">
+                <h1>Поиск через новостей</h1>
+                <p>
+                    В базе данных есть более 20 000 записей и вы можете сравнить обычный поиск и ElasticSearch.
+                </p>
+                <form action="{% url 'search_elastic' %}" method="get">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">ElasticSearch</label>
+                        <input type="search" name="q" class="form-control" id="search" aria-describedby="searchhelp">
+                        <div id="searchhelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+
+                <form action="{% url 'search_django' %}" method="get" class="mt-5">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Простой Django</label>
+                        <input type="search" name="q" class="form-control" id="search" aria-describedby="searchhelp">
+                        <div id="searchhelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

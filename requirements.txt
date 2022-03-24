@@ -1,0 +1,16 @@
+asgiref==3.5.0
+certifi==2021.10.8
+charset-normalizer==2.0.10
+Django==3.2
+django-debug-toolbar==3.2.4
+django-elasticsearch-dsl==7.2.2
+elasticsearch==7.16.3
+elasticsearch-dsl==7.4.0
+idna==3.3
+python-dateutil==2.8.2
+python-dotenv==0.19.2
+pytz==2021.3
+requests==2.27.1
+six==1.16.0
+sqlparse==0.4.2
+urllib3==1.26.8

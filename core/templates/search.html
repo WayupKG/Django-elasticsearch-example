@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Результаты поиска</title>
+</head>
+<body>
+    <div class="container my-5">    
+        <h1 class="text-center">Результаты поиска</h1>
+        <p>Найдено: {{ posts.count }} записа(ей), поиск заняла {{ time }} секунд.</p>
+        <div class="row">
+            {% for post in posts %}
+                <div class="col-lg-3 col-6">
+                    <div class="card border-success mb-3">
+                        <div class="card-header bg-transparent border-success">{{ post.title }}</div>
+                        <div class="card-body text-success">
+                            <p class="card-text">{{ post.description }}</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-success">{{ post.author }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
